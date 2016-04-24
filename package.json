@@ -1,0 +1,14 @@
+{
+  "name": "atom-number64-syntax",
+  "theme": "syntax",
+  "version": "0.1.0",
+  "description": "My syntax theme",
+  "keywords": [
+    "syntax"
+  ],
+  "repository": "https://github.com/number64tech/atom-number64-syntax",
+  "license": "MIT",
+  "engines": {
+    "atom": ">0.50.0"
+  }
+}
