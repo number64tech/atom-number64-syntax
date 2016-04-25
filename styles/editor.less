@@ -5,6 +5,7 @@ atom-text-editor, // <- remove when Shadow DOM can't be disabled
 :host {
   background-color: @syntax-background-color;
   color: @syntax-text-color;
+  font-family: @syntax-font-family;
 
   .line.cursor-line {
     background-color: @syntax-cursor-line;
@@ -78,5 +79,47 @@ atom-text-editor, // <- remove when Shadow DOM can't be disabled
   .gutter .line-number:after,
   .fold-marker:after {
     color: @syntax-gutter-text-color-selected;
+  }
+}
+
+// for MarkDown-preview
+.markdown-preview.markdown-preview {
+
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+    color: #CCDDFF;
+  }
+  h1 {
+      font-size: 35px;
+      border: none;
+      margin: 30px auto;
+      text-align: center;
+      letter-spacing: 5px
+  }
+  h2 {
+    font-size: 25px;
+    margin: 40px auto 25px;
+  }
+  h3 {
+    font-size: 20px;
+    margin-bottom: 10px
+  }
+  h4, h5, h6 {
+    font-size: 18px;
+    margin: 20px 0 15px 0;
+  }
+
+  p{
+    margin: 3px 0;
+  }
+
+  blockquote{
+    margin: 25px 0;
+    padding-left: 20px;
+    border-left: 4px solid #ccc;
+    font-style: italic;
+    font-size: inherit;
+    line-height: 1.5;
+    p{font-size:inherit}
   }
 }
