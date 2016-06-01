@@ -85,9 +85,17 @@ atom-text-editor, // <- remove when Shadow DOM can't be disabled
 // for MarkDown-preview
 .markdown-preview.markdown-preview {
 
-  h1, h2, h3, h4, h5, h6 {
+  h1, h2 {
+    font-weight: bold;
+    color: #CCCCFF;
+  }
+  h3 {
     font-weight: normal;
-    color: #CCDDFF;
+    color: #CCE0FF;
+  }
+  h4, h5, h6 {
+    font-weight: normal;
+    color: #CCFFFF;
   }
   h1 {
       font-size: 35px;
@@ -102,7 +110,8 @@ atom-text-editor, // <- remove when Shadow DOM can't be disabled
   }
   h3 {
     font-size: 20px;
-    margin-bottom: 10px
+    margin-bottom: 10px;
+    text-decoration: underline;
   }
   h4, h5, h6 {
     font-size: 18px;
