@@ -1,11 +1,9 @@
 
 // Editor styles (background, gutter, guides)
 
-atom-text-editor, // <- remove when Shadow DOM can't be disabled
-:host {
+atom-text-editor {
   background-color: @syntax-background-color;
   color: @syntax-text-color;
-  font-family: @syntax-font-family;
 
   .line.cursor-line {
     background-color: @syntax-cursor-line;
@@ -38,6 +36,21 @@ atom-text-editor, // <- remove when Shadow DOM can't be disabled
 
   .wrap-guide {
     background-color: @syntax-wrap-guide-color;
+  }
+
+  // find + replace
+  .find-result .region.region.region,
+  .current-result .region.region.region {
+    border-radius: 2px;
+    background-color: @syntax-result-marker-color;
+    transition: border-color .4s;
+  }
+  .find-result .region.region.region {
+    border: 2px solid transparent;
+  }
+  .current-result .region.region.region {
+    border: 2px solid @syntax-result-marker-color-selected;
+    transition-duration: .1s;
   }
 
   .gutter {
@@ -79,57 +92,5 @@ atom-text-editor, // <- remove when Shadow DOM can't be disabled
   .gutter .line-number:after,
   .fold-marker:after {
     color: @syntax-gutter-text-color-selected;
-  }
-}
-
-// for MarkDown-preview
-.markdown-preview.markdown-preview {
-  font-family: @syntax-font-family;
-
-  h1, h2 {
-    font-weight: bold;
-    color: #CCCCFF;
-  }
-  h3 {
-    font-weight: normal;
-    color: #CCE0FF;
-  }
-  h4, h5, h6 {
-    font-weight: normal;
-    color: #CCFFFF;
-  }
-  h1 {
-      font-size: 35px;
-      border: none;
-      margin: 30px auto;
-      text-align: center;
-      letter-spacing: 5px
-  }
-  h2 {
-    font-size: 25px;
-    margin: 40px auto 25px;
-  }
-  h3 {
-    font-size: 20px;
-    margin-bottom: 10px;
-    text-decoration: underline;
-  }
-  h4, h5, h6 {
-    font-size: 18px;
-    margin: 20px 0 15px 0;
-  }
-
-  p{
-    margin: 3px 0;
-  }
-
-  blockquote{
-    margin: 25px 0;
-    padding-left: 20px;
-    border-left: 4px solid #ccc;
-    font-style: italic;
-    font-size: inherit;
-    line-height: 1.5;
-    p{font-size:inherit}
   }
 }
