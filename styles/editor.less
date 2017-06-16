@@ -39,17 +39,13 @@ atom-text-editor {
   }
 
   // find + replace
-  .find-result .region.region.region,
-  .current-result .region.region.region {
+  .find-result .region,
+  .current-result .region {
     border-radius: 2px;
-    background-color: @syntax-result-marker-color;
-    transition: border-color .4s;
-  }
-  .find-result .region.region.region {
-    border: 2px solid transparent;
+    border: 2px solid @syntax-result-marker-color;
   }
   .current-result .region.region.region {
-    border: 2px solid @syntax-result-marker-color-selected;
+    border: 3px solid @syntax-result-marker-color-selected;
     transition-duration: .1s;
   }
 
